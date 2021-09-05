@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- name="GENERATOR" content="github.com/mmarkdown/mmark Mmark Markdown Processor - mmark.miek.nl" -->
+<rfc version="3" ipr="trust200902" docName="draft-sitw-dnsop-metazones-01" submissionType="independent" category="info" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude" indexInclude="false">
+
+<front>
+<title abbrev="metazones">DNS Metazones</title><seriesInfo value="draft-sitw-dnsop-metazones-01" stream="independent" status="informational" name="Internet-Draft"></seriesInfo>
+<author role="editor" initials="S." surname="Instenes" fullname="Shawn Instenes"><organization></organization><address><postal><street></street>
+</postal><email>shawn@instenes.com </email>
+</address></author><author role="editor" initials="T." surname="Wicinski" fullname="Tim Wicinski"><organization></organization><address><postal><street></street>
+<city>Elkins</city>
+<code>26241</code>
+<country>USA</country>
+<region>WV</region>
+</postal><email>tjw.ietf@gmail.com</email>
+</address></author><date/>
+<area></area>
+<workgroup>DNSOP</workgroup>
+
+<abstract>
+<t>This document describes a method for automatic zone catalog
+ provisioning and synchronization among DNS primary and secondary
+ nameservers by storing and transferring the catalogs as regular DNS
+ zones.</t>
+</abstract>
+
+</front>
+
+<middle>
+
+<section anchor="introduction"><name>Introduction</name>
+<t>DNS nameservers implement AXFR and IXFR for zone data synchronization
+ among a zone's primary its and secondary nameservers, but the list of
+ zones served by the primary (called a catalog in [RFC1035]) is not
+ automatically synchronized.  The administrator of a DNS nameserver
+ farm has to manually, or via an external application layer,
+ synchronize such zone catalogs among primaries and their secondary
+ nameservers.  This can be inconvenient, error-prone and dependent on
+ the nameserver implementation.</t>
+<t>A method for automatic zone catalog provisioning and synchronization
+ is useful, so that the zone catalog can be maintained in a reference
+ location by an administrator, similar to zone data.</t>
+<t>This document describes one such method, in which the catalog is
+ represented as a regular DNS zone called a &quot;catalog zone&quot;, and
+ transferred using DNS zone transfers.  The representation of catalogs
+ within DNS zones is specified and nameserver requirements are listed
+ so that DNS implementations can support catalog zones.</t>
+<t>The contents and representation of catalog zones are described in
+ Section 2.  Nameserver behavior is described in Section 3.  A
+ glossary of some terms used in this memo is provided in Appendix A.</t>
+</section>
+
+</middle>
+
+<back>
+
+</back>
+
+</rfc>
