@@ -3,8 +3,14 @@
 
 DIRNAME := $(shell basename $(CURDIR))
 
-VERSION = 01
 DOCNAME = $(DIRNAME)
+VERSION = 01
+
+ADOPTED =
+
+OUTDIR=$(DOCNAME)-$(VERSION)
+
+# OUTDIREXISTS=$(OUTDIR)/.f
 
 all: $(DOCNAME)-$(VERSION).txt $(DOCNAME)-$(VERSION).html
 
